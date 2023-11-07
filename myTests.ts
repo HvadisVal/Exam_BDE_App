@@ -43,5 +43,3 @@ test('Division by zero should show an error', async t => {
     // Check if the result is 'Infinity'
     await t.expect(resultField.value).eql('Infinity');
 });
-
-// Test 3
