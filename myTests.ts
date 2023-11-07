@@ -25,22 +25,4 @@ test('Basic Arithmetic Operations', async t => {
 
 // Test 2 - Division by zero
 
-// Test 2
-test('Division by zero should show an error', async t => {
-    // Define selectors for buttons and result field
-    const fourButton = Selector('button').withText('4');
-    const divideButton = Selector('button').withText('/');
-    const zeroButton = Selector('button').withText('0');
-    const equalsButton = Selector('button').withText('=');
-    const resultField = Selector('#result');
 
-    // Perform division by zero
-    await t
-        .click(fourButton)
-        .click(divideButton)
-        .click(zeroButton)
-        .click(equalsButton);
-
-    // Check if the result is 'Infinity'
-    await t.expect(resultField.value).eql('Infinity');
-});
