@@ -23,6 +23,7 @@ test('Basic Arithmetic Operations', async t => {
     await t.expect(resultField.value).eql('3');
 });
 
+// Test 2 - Division by zero
 
 // Test 2
 test('Division by zero should show an error', async t => {
@@ -42,4 +43,24 @@ test('Division by zero should show an error', async t => {
 
     // Check if the result is 'Infinity'
     await t.expect(resultField.value).eql('Infinity');
+});
+
+// Test 3
+test('Multiplication of two numbers', async t => {
+    // Define selectors for buttons and result field
+    const threeButton = Selector('button').withText('3');
+    const multiplyButton = Selector('button').withText('*');
+    const fourButton = Selector('button').withText('4');
+    const equalsButton = Selector('button').withText('=');
+    const resultField = Selector('#result');
+
+    // Perform multiplication
+    await t
+        .click(threeButton)
+        .click(multiplyButton)
+        .click(fourButton)
+        .click(equalsButton);
+
+    // Check if the result is '12'
+    await t.expect(resultField.value).eql('12');
 });

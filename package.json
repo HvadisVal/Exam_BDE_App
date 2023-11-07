@@ -1,11 +1,13 @@
 {
-    "name": "color-switcher",
+    "name": "calculator",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+        "test": "testcafe chrome myTests.ts",
+        "start": "tsc && node index.js",
+        "build": "tsc"
+    },    
     "keywords": [],
     "author": "",
     "license": "ISC",
