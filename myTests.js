@@ -23,7 +23,6 @@ test('Basic Arithmetic Operations', async t => {
     await t.expect(resultField.value).eql('3');
 });
 
-// Test 2 - Division by zero
 
 // Test 2
 test('Division by zero should show an error', async t => {
